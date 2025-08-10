@@ -1,1 +1,132 @@
 /* CSS Advanced Styles */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 170px;
+}
+
+header a img {
+    width: 167px;
+    height: 32px;
+}
+
+header nav {
+    display: flex;
+    gap: 41px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Main banner section */
+main section:first-child {
+    background: radial-gradient(85.9% 85.9% at 50% 14.1%, rgba(41, 48, 61, 0.0001) 0%, #071629 100%), url('background.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 1093px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+main section:first-child > div:first-child {
+    margin-bottom: 65px;
+}
+
+main section:first-child h1 {
+    font-size: 120px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.04;
+}
+
+main section:first-child p {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    word-spacing: 26px;
+}
+
+main section:first-child button {
+    background: #C271FF;
+    color: white;
+    border: none;
+    border-radius: 22px;
+    padding: 15px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Learn from the pros section */
+main section:first-child > div:last-child h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 110px;
+    color: white;
+}
+
+main section:first-child > div:last-child > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 58px;
+    max-width: 1009px;
+}
+
+main section:first-child > div:last-child > div > div {
+    text-align: center;
+    flex: 1;
+}
+
+main section:first-child > div:last-child > div > div img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 26px;
+}
+
+main section:first-child > div:last-child > div > div h3 {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 6px;
+    color: white;
+}
+
+main section:first-child > div:last-child > div > div p {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    color: white;
+    word-spacing: normal;
+}
