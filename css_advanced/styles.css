@@ -61,7 +61,7 @@ header nav a {
 }
 
 .hero-content {
-    margin-bottom: 65px;
+    margin-bottom: 120px;
 }
 
 .hero h1 {
@@ -94,7 +94,7 @@ header nav a {
 .pros-section h2 {
     font-size: clamp(24px, 4vw, 32px);
     font-weight: 300;
-    margin-bottom: 110px;
+    margin-bottom: 65px;
     color: white;
 }
 
@@ -104,29 +104,31 @@ header nav a {
 }
 
 .pros-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 58px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
     max-width: 1009px;
     width: 100%;
 }
 
 .pros-grid div {
     text-align: center;
+    flex: 1;
+    max-width: 150px;
 }
 
 .pros-grid img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 26px;
+    margin-bottom: 15px;
     object-fit: cover;
 }
 
 .pros-grid h3 {
     font-size: 18px;
     font-weight: 900;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
     color: white;
     line-height: 1.2;
 }
@@ -136,8 +138,9 @@ header nav a {
     font-style: italic;
     font-weight: 400;
     color: white;
-    line-height: 1.3;
+    line-height: 1.4;
     margin: 0;
+    text-align: center;
 }
 
 /* Quote section */
@@ -470,8 +473,13 @@ footer {
     }
     
     .pros-grid {
-        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
+    }
+    
+    .pros-grid div {
+        max-width: 45%;
     }
     
     .quote-content {
@@ -503,7 +511,12 @@ footer {
 
 @media (max-width: 480px) {
     .pros-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pros-grid div {
+        max-width: 150px;
     }
     
     .membership-grid {
