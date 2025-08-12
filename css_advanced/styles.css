@@ -43,11 +43,9 @@ header nav a {
     text-transform: uppercase;
 }
 
-/* Main banner section */
-main section:first-child {
+/* Hero section */
+.hero {
     background: radial-gradient(85.9% 85.9% at 50% 14.1%, rgba(41, 48, 61, 0.0001) 0%, #071629 100%);
-    background-size: cover;
-    background-position: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -55,29 +53,28 @@ main section:first-child {
     align-items: center;
     text-align: center;
     color: white;
-    position: relative;
     padding: 150px 5% 50px;
 }
 
-main section:first-child > div:first-child {
+.hero-content {
     margin-bottom: 65px;
 }
 
-main section:first-child h1 {
+.hero h1 {
     font-size: clamp(60px, 8vw, 120px);
     font-weight: 700;
     margin-bottom: 40px;
     line-height: 1.04;
 }
 
-main section:first-child p {
+.hero p {
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 40px;
     word-spacing: 26px;
 }
 
-main section:first-child button {
+.hero button {
     background: #C271FF;
     color: white;
     border: none;
@@ -90,15 +87,14 @@ main section:first-child button {
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Learn from the pros section */
-main section:first-child > div:last-child h2 {
+.pros-section h2 {
     font-size: clamp(24px, 4vw, 32px);
     font-weight: 300;
     margin-bottom: 110px;
     color: white;
 }
 
-main section:first-child > div:last-child > div {
+.pros-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 58px;
@@ -106,34 +102,34 @@ main section:first-child > div:last-child > div {
     width: 100%;
 }
 
-main section:first-child > div:last-child > div > div {
+.pros-grid div {
     text-align: center;
 }
 
-main section:first-child > div:last-child > div > div img {
+.pros-grid img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin-bottom: 26px;
+    object-fit: cover;
 }
 
-main section:first-child > div:last-child > div > div h3 {
+.pros-grid h3 {
     font-size: 18px;
     font-weight: 900;
     margin-bottom: 6px;
     color: white;
 }
 
-main section:first-child > div:last-child > div > div p {
+.pros-grid p {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
     color: white;
-    word-spacing: normal;
 }
 
-/* Quote section styles */
-main section:nth-child(2) {
+/* Quote section */
+.quote {
     background: linear-gradient(103.3deg, #C271FF -2.39%, #C271FF 56.12%);
     padding: 106px 5% 120px;
     display: flex;
@@ -141,7 +137,7 @@ main section:nth-child(2) {
     align-items: center;
 }
 
-main section:nth-child(2) > div {
+.quote-content {
     display: flex;
     align-items: center;
     gap: 70px;
@@ -149,7 +145,7 @@ main section:nth-child(2) > div {
     width: 100%;
 }
 
-main section:nth-child(2) img {
+.quote-content img {
     width: 160px;
     height: 160px;
     border-radius: 50%;
@@ -157,12 +153,11 @@ main section:nth-child(2) img {
     flex-shrink: 0;
 }
 
-main section:nth-child(2) > div > div {
+.quote-content div {
     color: white;
 }
 
-main section:nth-child(2) blockquote {
-    font-family: 'Source Sans Pro', sans-serif;
+.quote blockquote {
     font-size: 22px;
     font-weight: 400;
     line-height: 33.6px;
@@ -170,30 +165,27 @@ main section:nth-child(2) blockquote {
     font-style: normal;
 }
 
-main section:nth-child(2) > div > div p:first-of-type {
-    font-family: 'Source Sans Pro', sans-serif;
+.author-name {
     font-size: 22px;
     font-weight: 700;
     line-height: 27.65px;
     margin-bottom: 4px;
 }
 
-main section:nth-child(2) > div > div p:last-of-type {
-    font-family: 'Source Sans Pro', sans-serif;
+.author-title {
     font-size: 22px;
     font-weight: 400;
     line-height: 27.65px;
     font-style: italic;
 }
 
-/* Videos section styles */
-main section:nth-child(3) {
+/* Videos section */
+.videos {
     padding: 87px 5% 135px;
     background: white;
 }
 
-main section:nth-child(3) h1 {
-    font-family: 'Source Sans Pro', sans-serif;
+.videos h1 {
     font-size: clamp(24px, 4vw, 32px);
     font-weight: 300;
     text-align: center;
@@ -201,12 +193,12 @@ main section:nth-child(3) h1 {
     margin-bottom: 67px;
 }
 
-main section:nth-child(3) h1 span {
+.videos h1 span {
     color: #C271FF;
     font-weight: 700;
 }
 
-main section:nth-child(3) > div {
+.videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
@@ -214,105 +206,118 @@ main section:nth-child(3) > div {
     margin: 0 auto;
 }
 
-main section:nth-child(3) > div > div {
+.video-card {
     text-align: left;
 }
 
-main section:nth-child(3) > div > div > img {
+.video-thumbnail {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 13px;
+    cursor: pointer;
+}
+
+.video-thumbnail img:first-child {
     width: 100%;
     height: 154px;
     object-fit: cover;
     border-radius: 4px;
-    margin-bottom: 13px;
+    display: block;
 }
 
-main section:nth-child(3) h2 {
-    font-family: 'Source Sans Pro', sans-serif;
+.play-button {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 64px !important;
+    height: 64px !important;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.video-card h2 {
     font-size: 16px;
     font-weight: 700;
     color: #071629;
     margin-bottom: 7px;
 }
 
-main section:nth-child(3) > div > div > p {
-    font-family: 'Source Sans Pro', sans-serif;
+.video-card > p {
     font-size: 14px;
     font-weight: 400;
     color: rgba(7, 22, 41, 0.5);
     margin-bottom: 15px;
 }
 
-main section:nth-child(3) > div > div > div:nth-of-type(1) {
+.author-info {
     display: flex;
     align-items: center;
     gap: 14px;
     margin-bottom: 10px;
 }
 
-main section:nth-child(3) > div > div > div:nth-of-type(1) img {
+.author-info img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin-bottom: 0;
+    object-fit: cover;
 }
 
-main section:nth-child(3) > div > div > div:nth-of-type(1) h3 {
-    font-family: 'Source Sans Pro', sans-serif;
+.author-info h3 {
     font-size: 14px;
     font-weight: 600;
     color: #C271FF;
     margin: 0;
 }
 
-main section:nth-child(3) > div > div > div:nth-of-type(2) {
+.rating-duration {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-main section:nth-child(3) > div > div > div:nth-of-type(2) > div {
+.rating {
     display: flex;
     gap: 8px;
 }
 
-main section:nth-child(3) > div > div > div:nth-of-type(2) img {
+.rating img {
     width: 15px;
     height: 15px;
-    margin-bottom: 0;
 }
 
-main section:nth-child(3) > div > div > div:nth-of-type(2) p {
-    font-family: 'Source Sans Pro', sans-serif;
+.rating-duration p {
     font-size: 14px;
     font-weight: 600;
     color: #C271FF;
     margin: 0;
 }
 
-/* Membership section styles */
-main section:nth-child(4) {
+/* Membership section */
+.membership {
     background: #071629;
     padding: 70px 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-main section:nth-child(4) h1 {
-    font-family: 'Source Sans Pro', sans-serif;
+.membership h1 {
     font-size: clamp(24px, 4vw, 32px);
     font-weight: 300;
     color: white;
-    text-align: center;
     margin-bottom: 80px;
 }
 
-main section:nth-child(4) h1 span {
+.membership h1 span {
     color: #C271FF;
     font-weight: 700;
 }
 
-main section:nth-child(4) > div {
+.membership-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 58px;
@@ -321,34 +326,31 @@ main section:nth-child(4) > div {
     margin-bottom: 85px;
 }
 
-main section:nth-child(4) > div > div {
-    text-align: center;
+.membership-grid div {
     color: white;
 }
 
-main section:nth-child(4) > div > div img {
+.membership-grid img {
     width: 44px;
     height: 35px;
     margin-bottom: 26px;
 }
 
-main section:nth-child(4) > div > div h2 {
-    font-family: 'Source Sans Pro', sans-serif;
+.membership-grid h2 {
     font-size: 18px;
     font-weight: 600;
     color: white;
     margin-bottom: 14px;
 }
 
-main section:nth-child(4) > div > div p {
-    font-family: 'Source Sans Pro', sans-serif;
+.membership-grid p {
     font-size: 14px;
     font-weight: 400;
     color: white;
     line-height: 1.6;
 }
 
-main section:nth-child(4) > button {
+.membership button {
     background: #C271FF;
     color: white;
     border: none;
@@ -361,14 +363,13 @@ main section:nth-child(4) > button {
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* FAQ section styles */
-main section:nth-child(5) {
+/* FAQ section */
+.faq {
     background: white;
     padding: 68px 5% 83px;
 }
 
-main section:nth-child(5) h1 {
-    font-family: 'Source Sans Pro', sans-serif;
+.faq h1 {
     font-size: clamp(36px, 6vw, 60px);
     font-weight: 300;
     color: #071629;
@@ -376,83 +377,78 @@ main section:nth-child(5) h1 {
     margin-bottom: 80px;
 }
 
-main section:nth-child(5) > div {
+.faq-content {
     max-width: 920px;
     margin: 0 auto;
 }
 
-main section:nth-child(5) > div > div {
+.faq-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     margin-bottom: 40px;
 }
 
-main section:nth-child(5) > div > div:last-child {
+.faq-row:last-child {
     margin-bottom: 0;
 }
 
-main section:nth-child(5) h2 {
-    font-family: 'Source Sans Pro', sans-serif;
+.faq-item h2 {
     font-size: 16px;
     font-weight: 700;
     color: #071629;
     margin-bottom: 15px;
 }
 
-main section:nth-child(5) > div > div > div p {
-    font-family: 'Source Sans Pro', sans-serif;
+.faq-item p {
     font-size: 14px;
     font-weight: 400;
     color: rgba(7, 22, 41, 0.5);
     line-height: 1.7;
 }
 
-/* Footer styles */
+/* Footer */
 footer {
     background: #071629;
     padding: 40px 5% 35px;
 }
 
-footer > div > div {
+.footer-content {
+    max-width: 1009px;
+    margin: 0 auto;
+}
+
+.footer-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
-    max-width: 1009px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
 }
 
-footer > div > div img {
+.footer-top img {
     width: 167px;
     height: 30px;
 }
 
-footer > div > div > div {
+.social-links {
     display: flex;
     gap: 20px;
 }
 
-footer > div > div > div a img {
-    width: 30px;
-    height: 30px;
+.social-links img {
+    width: 30px !important;
+    height: 30px !important;
 }
 
-footer > div > p {
-    font-family: 'Source Sans Pro', sans-serif;
+.footer-content > p {
     font-size: 12px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.35);
     text-align: center;
     margin: 0;
-    max-width: 1009px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* Mobile responsive styles */
+/* Mobile responsive */
 @media (max-width: 768px) {
     header {
         padding: 20px 5%;
@@ -462,40 +458,36 @@ footer > div > p {
         background: #071629;
     }
     
-    header nav {
-        gap: 20px;
-    }
-    
-    main section:first-child {
+    .hero {
         padding-top: 120px;
     }
     
-    main section:first-child > div:last-child > div {
+    .pros-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
     
-    main section:nth-child(2) > div {
+    .quote-content {
         flex-direction: column;
         text-align: center;
         gap: 30px;
     }
     
-    main section:nth-child(3) > div {
+    .videos-grid {
         grid-template-columns: 1fr;
     }
     
-    main section:nth-child(4) > div {
+    .membership-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
     
-    main section:nth-child(5) > div > div {
+    .faq-row {
         grid-template-columns: 1fr;
         gap: 30px;
     }
     
-    footer > div > div {
+    .footer-top {
         flex-direction: column;
         gap: 20px;
         text-align: center;
@@ -503,53 +495,11 @@ footer > div > p {
 }
 
 @media (max-width: 480px) {
-    main section:first-child > div:last-child > div {
+    .pros-grid {
         grid-template-columns: 1fr;
     }
     
-    main section:nth-child(4) > div {
+    .membership-grid {
         grid-template-columns: 1fr;
     }
-    
-    header nav {
-        gap: 15px;
-    }
-    
-    header nav a {
-        font-size: 10px;
-    }
-}
-
-/* Video thumbnail with play button overlay */
-.video-thumbnail {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 64px !important;
-    height: 64px !important;
-    margin-bottom: 0 !important;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.video-thumbnail img:first-child {
-    position: relative;
-}
-
-.video-thumbnail::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
 }
