@@ -47,7 +47,7 @@ header nav a {
 .hero {
     background: 
         radial-gradient(85.9% 85.9% at 50% 14.1%, rgba(41, 48, 61, 0.0001) 0%, #071629 100%),
-        url('images/hero-background.png');
+        url('images/diagonal.png');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
