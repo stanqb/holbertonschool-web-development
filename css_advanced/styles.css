@@ -152,9 +152,10 @@ header nav a {
     font-style: italic;
     font-weight: 400;
     color: white;
-    line-height: 1.4;
+    line-height: 1.2;
     margin: 0;
     text-align: center;
+    white-space: nowrap;
 }
 
 /* Quote section */
