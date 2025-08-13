@@ -45,9 +45,7 @@ header nav a {
 
 /* Hero section */
 .hero {
-    background: 
-        radial-gradient(85.9% 85.9% at 50% 14.1%, rgba(41, 48, 61, 0.0001) 0%, #071629 100%),
-        url('images/diagonal.png');
+    background: radial-gradient(85.9% 85.9% at 50% 14.1%, rgba(41, 48, 61, 0.0001) 0%, #071629 100%);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -58,6 +56,7 @@ header nav a {
     text-align: center;
     color: white;
     padding: 150px 5% 50px;
+    position: relative;
 }
 
 .hero::before {
@@ -152,10 +151,9 @@ header nav a {
     font-style: italic;
     font-weight: 400;
     color: white;
-    line-height: 1.2;
+    line-height: 1.4;
     margin: 0;
     text-align: center;
-    white-space: nowrap;
 }
 
 /* Quote section */
